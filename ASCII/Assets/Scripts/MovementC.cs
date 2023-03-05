@@ -20,5 +20,6 @@ public class MovementC : MonoBehaviour
         newPos.x += speed * Time.deltaTime;
         transform.position = newPos;
         
+        
     }
 }

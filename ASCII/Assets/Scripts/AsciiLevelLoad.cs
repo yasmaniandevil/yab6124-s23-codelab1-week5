@@ -11,7 +11,8 @@ public class AsciiLevelLoad : MonoBehaviour
     public GameObject Circle;
     public GameObject Triangle;
     public GameObject Square;
-    public GameObject Computer;
+    public GameObject ComputerPlayer;
+    public GameObject Cylinder;
 
     private GameObject currentComputer;
     
@@ -73,8 +74,11 @@ public class AsciiLevelLoad : MonoBehaviour
                 {
                     case 'p'://computer
                         computerStartPos = new Vector2(xOffset + xPos, yOffset - yPos);
-                        newObj = Instantiate<GameObject>(Computer);
+                        newObj = Instantiate<GameObject>(ComputerPlayer);
                         currentComputer = newObj;
+                        break;
+                    case 'y': //cylinder
+                        newObj = Instantiate<GameObject>(Cylinder);
                         break;
                     case 't':
                         newObj = Instantiate<GameObject>(Triangle);

@@ -156,8 +156,9 @@ MonoBehaviour:
   Circle: {fileID: 5870344488479176109, guid: 8d4c44f98a6984d4a8adeb232999d7ae, type: 3}
   Triangle: {fileID: 3641500711828106122, guid: 8132671f99e1e5a4abdd90666357ab58, type: 3}
   Square: {fileID: 578024508081488918, guid: a5e8a7420f79095469b5052431686c90, type: 3}
-  Computer: {fileID: 5414191944505989822, guid: d8955b1174ebcf94989746f25dbab02b, type: 3}
-  computerStartPos: {x: 7, y: 0}
+  ComputerPlayer: {fileID: 5414191944505989822, guid: d8955b1174ebcf94989746f25dbab02b, type: 3}
+  Cylinder: {fileID: 1724970404258476922, guid: f48f090f47633e4438a4f26857989803, type: 3}
+  computerStartPos: {x: 0, y: 0}
   xOffset: -7
   yOffset: 3
 --- !u!114 &495331908
