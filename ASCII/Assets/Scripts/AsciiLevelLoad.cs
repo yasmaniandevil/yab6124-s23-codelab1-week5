@@ -11,14 +11,15 @@ public class AsciiLevelLoad : MonoBehaviour
     public GameObject Circle;
     public GameObject Triangle;
     public GameObject Square;
+    public GameObject Computer;
 
+    private GameObject currentComputer;
+    
     private GameObject level;
 
     private int currentLevel = 0;
 
-    public float speed = 2;
-
-    //private Vector2 initialPos;
+    public Vector2 computerStartPos;
 
     public int CurrentLevel
     {
@@ -70,6 +71,11 @@ public class AsciiLevelLoad : MonoBehaviour
 
                 switch (c)
                 {
+                    case 'p'://computer
+                        computerStartPos = new Vector2(xOffset + xPos, yOffset - yPos);
+                        newObj = Instantiate<GameObject>(Computer);
+                        currentComputer = newObj;
+                        break;
                     case 't':
                         newObj = Instantiate<GameObject>(Triangle);
                         break;
@@ -91,6 +97,8 @@ public class AsciiLevelLoad : MonoBehaviour
                         new Vector2(
                             xOffset + xPos,
                             yOffset - yPos);
+
+                    newObj.transform.parent = level.transform;
                 }
                 
             }
@@ -102,5 +110,17 @@ public class AsciiLevelLoad : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void ResetComputer()
+    {
+        currentComputer.transform.position = computerStartPos;
+        Debug.Log("reset");
+    }
+    
+    public void LevelUp()
+    {
+        Debug.Log("hit on mouse down");
+        CurrentLevel++;
     }
 }
