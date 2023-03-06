@@ -17,7 +17,7 @@ public class Mouse : MonoBehaviour
         
     }
 
-    private void OnMouseDown()
+    private void OnMouseDown() //when the mouse clicks the object it grabs the componenet script off of the game manager and does the function
     {
         GameManager.instance.GetComponent<AsciiLevelLoad>().LevelUp();
     }

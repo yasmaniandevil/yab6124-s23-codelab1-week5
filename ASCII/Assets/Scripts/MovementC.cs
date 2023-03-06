@@ -6,7 +6,7 @@ public class MovementC : MonoBehaviour
 {
     public float speed = 2;
 
-    private float x;
+    private float x; //float variable for the x axis
     // Start is called before the first frame update
     void Start()
     {
@@ -16,9 +16,9 @@ public class MovementC : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 newPos = transform.position;
-        newPos.x += speed * Time.deltaTime;
-        transform.position = newPos;
+        Vector2 newPos = transform.position; //transform the position of obj to new vector2
+        newPos.x += speed * Time.deltaTime; //new position x times the frame rates
+        transform.position = newPos; //then transform the position and set to new position
         
         
     }
